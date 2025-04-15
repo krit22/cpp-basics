@@ -1,0 +1,34 @@
+// output :
+// enter a number n
+// 4
+// enter a number r
+// 2
+// 6
+
+
+using namespace std;
+#include <iostream>
+
+int factorial(int n){
+    int product=1;
+    for(int i=1;i<=n;i++){
+        product = product*i;
+    }
+    return product;
+}
+
+int binomialCoffecient(int n, int r){
+    int coffecient = ((factorial(n))/(factorial(r)*factorial((n-r))));
+    return coffecient;
+}
+
+int main() {
+    cout<<"enter a number n\n";
+    int n;
+    cin>>n;
+    cout<<"enter a number r\n";
+    int r;
+    cin>>r;
+    cout<<binomialCoffecient(n,r)<<endl;
+    return 0;
+}
