@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare variables
+    int n;      // Input binary number
+    int sum = 0; // To store the decimal equivalent of the binary number
+    int power = 1; // To represent the current power of 2
+
+    // Prompt the user to input a binary number
+    cout << "Enter a number (in binary form): " << endl;
+    cin >> n;
+
+    // Process each digit of the binary number
+    while (n > 0) {
+        // Extract the last binary digit (0 or 1)
+        int r = n % 10;
+
+        // Add the current digit's value (r * power) to the sum
+        sum += r * power;
+
+        // Multiply power by 2 for the next place value (2^1, 2^2, 2^3, ...)
+        power *= 2;
+
+        // Remove the last digit of the number
+        n /= 10;
+    }
+
+    // Output the result: the decimal equivalent of the input binary number
+    cout << "The number is " << sum << endl;
+
+    return 0;
+}
