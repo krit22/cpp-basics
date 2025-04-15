@@ -1,0 +1,31 @@
+// enter a number n
+// 4
+// 4th fibonacci is = 3
+
+
+
+using namespace std;
+#include <iostream>
+
+int fibonacci(int n){
+    int a=1;
+    int b=1;
+    int c;
+    int count=0;
+    while(count!=n){
+        c=a+b;
+        a=b;
+        b=c;
+        count++;
+    }
+    return c;
+}
+
+int main() {
+    cout<<"enter a number n\n";
+    int n,i;
+    cin>>n;
+    cout<<n<<"th fibonacci is = ";
+    cout<<fibonacci(n-2);
+    return 0;
+}
