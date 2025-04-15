@@ -1,0 +1,25 @@
+// output:
+// enter a number n
+// 23
+// 10111
+
+using namespace std;
+#include <iostream>
+
+
+
+int main() {
+    cout<<"enter a number n\n";
+    int n;
+    int binary=0;
+    cin>>n;
+    int count=1;
+    do{
+        int r=n%2;
+        n/=2;
+        binary+= count*r;
+        count*=10;
+        }while(n>0);
+        cout<<binary;
+    return 0;
+}
