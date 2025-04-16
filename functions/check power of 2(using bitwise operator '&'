@@ -1,0 +1,30 @@
+// output:
+
+// enter a number
+// 5
+// false
+
+// output:
+
+// enter a number
+// 32
+// true
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n1;
+    int n2=0;
+    cout<<"enter a number\n";
+    cin>>n1;
+    n2=n1-1;
+    int n3=n2&n1;
+    if(n3==0){
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+}
