@@ -1,0 +1,43 @@
+// output 1:
+
+// enter a number
+// 32
+// true
+
+// output 2:
+
+// enter a number
+// 6
+// false
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int p=1;
+    int n;
+    cout<<"enter a number\n";
+    cin>>n;
+    int result=0;
+    while(p<=n){
+        if(p==n){
+            result=1;
+            break;
+        }
+        else{
+            p*=2;
+        }
+    }
+    if(result==1){
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+}
