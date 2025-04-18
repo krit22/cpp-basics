@@ -1,0 +1,26 @@
+outputs the number with occurs only once in the given array
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[]={4,1,2,1,2};
+    int count=0;
+    int answer;
+    int temp=1;
+    int size=5;
+    for(int i=0;i<size;i++){
+        temp=arr[i];
+        for(int k=0;k<size;k++){
+            
+            if(arr[k]==temp){
+                count++;
+            }
+        }
+        if(count==1){
+            cout<<temp;
+        }
+        count=0;
+    }
+}
