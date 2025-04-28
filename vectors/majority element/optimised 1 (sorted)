@@ -1,0 +1,27 @@
+//requires a sorted array
+// single loop
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> vec ={1,1,2,2,2,3,3,3,3,3,3,3,3};
+    int count=0;
+    int size = vec.size();
+    int temp=vec[0];
+    for(int num:vec){
+        if(temp!=num){
+            count=0;
+            temp=num;
+        }
+        if(temp==num){
+            count++;
+        }
+        if(count>size/2){
+            cout<<num;
+            break;
+        }
+
+    }
+}
