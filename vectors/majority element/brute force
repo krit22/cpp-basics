@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> vec ={1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3};
+    int answer;
+    int size=vec.size();
+    size/=2;
+    for(int num:vec){
+        int count=0;
+        answer = num;
+        for(int nums:vec){
+            if(num==nums){
+                count++;
+            }
+        }
+        if(count>size){
+            cout<<answer;
+            break;
+        }
+    }
+
+}
+
+
+//output will be 3 for the above code
