@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+using namespace std;
+
+#include <iostream>
+
+int main() {
+    int height[] = {1,8,6,2,5,4,8,3,7};
+    int elements=9;
+    int volume=0;
+    int l=0;
+    int r=elements-1;
+    while(l<r){
+        int width=r-l;
+        int heightt = min(height[l],height[r]);
+        int new_volume=heightt*width;
+        volume=max(volume,new_volume);
+        if(height[l]<height[r]){
+            l++;
+        }
+        else{
+            r--;
+        }
+    }
+    cout<<volume;
+    return 0;
+}
